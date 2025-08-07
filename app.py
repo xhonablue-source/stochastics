@@ -59,8 +59,8 @@ Includes a friendly **Wall Street 101** intro, curated **Explore More** links, *
 # Progress & Badges
 # =========================
 SECTIONS = [
-    "0) Wall Street 101 (Intro)",
-    "0b) Chart Anatomy Lab",
+    " Wall Street 101 (Intro)",
+    " Chart Anatomy Lab",
     "1) Bernoulli & Binomial",
     "2) LLN & CLT",
     "3) Random Walks",
