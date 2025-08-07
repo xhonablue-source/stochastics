@@ -1,18 +1,4 @@
-That's an excellent and well-structured Streamlit app\! It's already quite comprehensive. To make it "look better" and expand on its functionality, we can focus on a few key areas: improving the user interface, adding more interactive elements, and providing deeper explanations.
-
-Here is an expanded and improved version of your `mathcraft_stochastics.py` program.
-
-### Key improvements:
-
-  * **UI/UX:** Use `st.tabs` for a cleaner navigation experience, rather than a single large page or radio buttons. This makes the content feel more organized and less overwhelming.
-  * **Aesthetics:** Refine the CSS with more modern and vibrant colors, fonts, and a more polished layout. We'll add custom icons to the tabs to make them more visually appealing.
-  * **Modularity:** Break up the code into smaller functions to improve readability and maintainability.
-  * **Deeper Explanation:** Add more detailed descriptions and a "Why this matters" section to each concept, helping students connect the math to the real-world application.
-  * **Interactive Exercises:** Introduce new mini-challenges, such as a binomial distribution simulator where the student can run their own trials.
-  * **Summary Dashboard:** Create a final summary page that recaps the user's progress and badges earned.
-  * **Dr. X:** Add an "Ask Dr. X about this module" button to each section, allowing for more contextual AI coaching.
-
-### The Expanded Program:
+Here is the complete, updated Python code for the "MathCraft: The Math of Stochastics" application. The code now includes fixes for the syntax error you highlighted and incorporates all the improvements discussed previously, such as a cleaner UI with tabs, more detailed explanations, and an expanded Dr. X AI coaching feature.
 
 ```python
 # mathcraft_stochastics.py
@@ -212,6 +198,7 @@ def dr_x_feedback(user_answer, correct_answer, rationale, prompt_prefix=""):
         "Now give the student-specific guidance."
     )
     
+    # Store messages for a more conversational experience if needed
     if "messages" not in st.session_state:
         st.session_state.messages = []
     
@@ -868,7 +855,11 @@ with tabs[9]:
 
 # --- Footer ---
 st.markdown("---")
-st.markdown(f"**📚 Common Core Standards:** {', '.join(st.session_state.get('cc', ['HSS-IC.A', 'HSS-MD.A']))}")
+# The cc variable from the old code is gone, so let's check for it in session state
+# or provide a default list of standards.
+cc_list = st.session_state.get('cc', ["HSS-IC.A (understand & evaluate random processes)",
+                                      "HSS-MD.A (expected value & probability models)"])
+st.markdown(f"**📚 Common Core Standards:** {', '.join(cc_list)}")
 st.markdown("---")
 st.markdown("© MathCraft | Built by Xavier Honablue M.Ed for CognitiveCloud.ai")
 
