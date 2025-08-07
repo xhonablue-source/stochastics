@@ -21,6 +21,7 @@ except Exception:
 # =========================
 st.set_page_config(
     page_title="MathCraft: The Math of Stochastics",
+    page_icon="🎲",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -42,13 +43,13 @@ a { text-decoration: none; }
 
 col_a, col_b = st.columns([1,4])
 with col_a:
-    st.markdown("")
+    st.markdown("🧠")
 with col_b:
     st.markdown("### www.cognitivecloud.ai")
     st.markdown("**Built by Xavier Honablue M.Ed for CognitiveCloud.ai**")
 
 st.markdown("---")
-st.title(" MathCraft: The Math of Stochastics")
+st.title("🎲 MathCraft: The Math of Stochastics")
 
 st.markdown("""
 Welcome! This lesson explores **randomness** — from **coin flips and binomial probability** to **random walks**, **GBM**, and a markets tie-in with the **Stochastic Oscillator**.  
@@ -59,8 +60,8 @@ Includes a friendly **Wall Street 101** intro, curated **Explore More** links, *
 # Progress & Badges
 # =========================
 SECTIONS = [
-    " Wall Street 101 (Intro)",
-    " Chart Anatomy Lab",
+    "0) Wall Street 101 (Intro)",
+    "0b) Chart Anatomy Lab",
     "1) Bernoulli & Binomial",
     "2) LLN & CLT",
     "3) Random Walks",
